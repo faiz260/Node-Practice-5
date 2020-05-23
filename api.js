@@ -5,12 +5,12 @@ const home = (req, res) => {
 }
 
 const signup = async (req, res) => {
-    const { firstName, lastname, password, userName } = req.body;
+    const { firstName, lastName, password, userName } = req.body;
 
     try {
         const user = await new User({
             firstName,
-            lastname,
+            lastName,
             userName,
             password
         }).save()
@@ -21,7 +21,7 @@ const signup = async (req, res) => {
         res.status(404).send({ success: false, message: error.message })
     }
 
-    res.send(firstName, lastName, userName, password)
+    // res.send(firstName, lastName, userName, password)
 };
 
 const login = async (req, res) => {

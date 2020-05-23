@@ -5,24 +5,24 @@ const UserSchema = new mongoose.Schema({
         type: String,
         trim: true,
         default: '',
-        required: true
+        // required: true
     },
     lastName: {
         type: String,
         trim: true,
         default: '',
-        required: true
+        // required: true
     },
     password: {
         type: String,
         trim: true,
-        required: true
+        // required: true
     },
     userName: {
         type: String,
         trim: true,
         default: '',
-        required: true,
+        // required: true,
         unique: true
     },
 
